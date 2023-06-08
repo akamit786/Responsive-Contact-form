@@ -1,0 +1,118 @@
+$white: rgba(255, 255, 255, 0.3);
+
+body {
+  background: linear-gradient(45deg, #FC466B, #3F5EFB);
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.form-container {
+  background: $white;
+  padding: 3em;
+  height: 320px;
+  border-radius: 20px;
+  border-left: 1px solid $white;
+  border-top: 1px solid $white;
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container h2 {
+  font-weight: 500;
+  color: rgb(18, 17, 17);
+  opacity: 0.7;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-container label {
+  color: rgb(0, 0, 0);
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.form-container input,
+.form-container textarea {
+  background: transparent;
+  width: 200px;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  border-left: 1px solid $white;
+  border-top: 1px solid $white;
+  border-radius: 5000px;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: rgb(18, 17, 17);
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-container input:hover,
+.form-container textarea:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container input[type="email"],
+.form-container input[type="password"]:focus,
+.form-container textarea:focus {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container button {
+  margin-top: 10px;
+  width: 150px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: rgba(76, 175, 80, 1);
+}
+
+.character {
+  width: 100px;
+  height: 100px;
+  background-image: url('smile.png'); /* Replace with your character image */
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease;
+  opacity: 0;
+}
+
+.character.active {
+  transform: translateX(-50%) translateY(-20px);
+  opacity: 1;
+}
+
+a,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
